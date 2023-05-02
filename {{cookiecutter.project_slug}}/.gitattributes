@@ -1,0 +1,10 @@
+# By default, normalize line endings
+* text=auto
+
+# Force Windows batch files to use CRLF
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
+*.{ics,[iI][cC][sS]} text eol=crlf
+
+# Force Unix bash files to use LF
+*.sh text eol=lf

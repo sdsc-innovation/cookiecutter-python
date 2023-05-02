@@ -1,0 +1,6 @@
+-r requirements.txt
+black[jupyter]>=23
+flake8
+mypy
+pre-commit
+pytest>=7
