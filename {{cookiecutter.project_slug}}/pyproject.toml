@@ -1,0 +1,32 @@
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "{{cookiecutter.module_name}}"
+version = "0.1.0"
+description = ""
+authors = []
+readme = "README.md"
+packages = [{include = "{{cookiecutter.module_name}}", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.24"
+pandas = "^2.0"
+
+[tool.black]
+line-length = 88
+target-version = ['py310', 'py311']
+include = '\.pyi?$'
+
+[tool.pylint]
+max-line-length = 88
+disable = [
+    "C0114", # (missing-module-docstring)
+    "C0115", # (missing-class-docstring)
+    "C0116", # (missing-function-docstring)
+    "R0903", # (too-few-public-methods)
+    "R0913", # (too-many-arguments)
+    "W0511", # (fixme)
+]

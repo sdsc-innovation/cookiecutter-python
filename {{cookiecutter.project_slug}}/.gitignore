@@ -2,8 +2,6 @@
 *.pyc
 .ipynb_checkpoints/
 *.egg-info/
-.mypy_cache/
-.pytest_cache/
 
 # IDE settings
 .vscode/

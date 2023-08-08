@@ -1,4 +1,9 @@
 -e .
+numpy~=1.24
+pandas~=2.0
+black[jupyter]~=23.7
 jupyter
-numpy>=1.24
-pandas>=2.0
+mypy~=1.4
+pre-commit~=3.3
+pylint~=2.17
+pytest~=7.4
