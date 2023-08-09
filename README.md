@@ -46,7 +46,7 @@ Please refer to the generated `README.md` for more details, in particular to ins
  * A `pyproject.toml` file is used instead of `setup.py`, as the latter is deprecated. Also, the TOML file act as a centralized configuration file for other tools.
  * The [`src` layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/) is used, to enforce proper use of [editable](https://setuptools.pypa.io/en/latest/userguide/development_mode.html) installation during development.
  * [Poetry](https://python-poetry.org/) is used as build system instead of [PyPA](https://www.pypa.io/en/latest/)'s [Setuptools](https://setuptools.pypa.io/en/latest/), as the configuration syntax is cleaner. However, if you require CPython extensions, you will need to use [Setuptools extension system](https://setuptools.pypa.io/en/latest/userguide/ext_modules.html).
- * Both `requirements.txt` and `requirements_dev.txt` are provided, allowing users to only install runtime dependencies. An `environment.yml` is also provided for [Conda](http://conda.io) users.
+ * `requirements.txt` is used to define development dependencies. An `environment.yml` is also provided for [Conda](http://conda.io) users.
  * [Black](https://black.readthedocs.io/en/stable/) is used for code formatting, using the default configuration.
  * [pytest](https://pytest.org/) is used for unit testing, as the standard `unittest` module tends to be more verbose.
  * [mypy](https://mypy-lang.org/) is suggested for static type checking.
