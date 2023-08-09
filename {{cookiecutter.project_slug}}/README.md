@@ -37,12 +37,14 @@ It is a good practice to manually invoke hooks after installation, just in case:
 ```
 pre-commit run --all-files
 ```
+{%- if cookiecutter.use_pytest %}
 
 Unit tests (using [pytest](https://pytest.org/)) are not executed as a pre-commit hook, to keep the overhead to a minimum. Instead, assuming that GitLab CI/CD is available, a `.gitlab-ci.yml` is configured to run tests after each commit. You can also execute them locally, manually:
 
 ```
 pytest
 ```
+{%- endif %}
 
 By default, [mypy](https://mypy-lang.org/) and [pylint](https://www.pylint.org/) are not executed automatically. You can however run them manually:
 

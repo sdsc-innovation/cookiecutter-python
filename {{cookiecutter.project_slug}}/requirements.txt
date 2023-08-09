@@ -8,4 +8,6 @@ jupyter
 mypy~=1.4
 pre-commit~=3.3
 pylint~=2.17
+{%- if cookiecutter.use_pytest %}
 pytest~=7.4
+{%- endif %}
