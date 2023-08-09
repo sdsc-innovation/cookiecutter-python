@@ -1,7 +1,9 @@
 -e .
 numpy~=1.24
 pandas~=2.0
+{%- if cookiecutter.use_black %}
 black[jupyter]~=23.7
+{%- endif %}
 jupyter
 mypy~=1.4
 pre-commit~=3.3
