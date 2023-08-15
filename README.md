@@ -21,7 +21,9 @@ This will prompt you for:
 
  1. a project name, used in `README.md`;
  2. a project slug, used for the top-level directory name;
- 3. a module name.
+ 3. a module name;
+ 4. whether you would like to use Black to format your code;
+ 5. whether you would like to use pytest to write unit tests.
 
 The module name may also be a short generic identifier, such as `lib` or `helper`, if you do not plan to use it externally.
 

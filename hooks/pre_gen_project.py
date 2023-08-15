@@ -23,9 +23,15 @@ MODULE_NAME = "{{ cookiecutter.module_name }}"
 
 
 if not is_slug(PROJECT_SLUG):
-    print("ERROR: invalid project slug")
+    print(
+        "ERROR: invalid project slug, must be kebab-case (lowercase alphanumeric and "
+        "dashes)"
+    )
     sys.exit(1)
 
 if not is_module_name(MODULE_NAME):
-    print("ERROR: invalid module name")
+    print(
+        "ERROR: invalid module name, must be a valid Python identifier in snake_case "
+        "(lowercase alphanumeric and underscores)"
+    )
     sys.exit(2)
