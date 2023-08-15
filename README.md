@@ -14,14 +14,14 @@ pip install -U cookiecutter
 Then, create a project based on this template:
 
 ```
-cookiecutter https://gitlab.datascience.ch/berdat/cookiecutter-python.git
+cookiecutter https://gitlab.datascience.ch/industry/common/cookiecutter-python.git
 ```
 
 This will prompt you for:
 
  1. a project name, used in `README.md`;
- 2. a project slug, used for the top-level directory name;
- 3. a module name;
+ 2. a project slug (in `kebab-case`), used for the top-level directory name;
+ 3. a module name (in `snake_case`);
  4. whether you would like to use Black to format your code;
  5. whether you would like to use pytest to write unit tests.
 
