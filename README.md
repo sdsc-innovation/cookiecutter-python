@@ -34,9 +34,9 @@ The generated folder structure is straightforward:
  * notebooks have their own folder;
  * and, by default, a `data` folder is added, as a suggestion.
 
-Apart from adding code, both in `.py` files and notebooks, it is recommended to make sure that dependencies are properly configured:
+Apart from adding code, both in `.py` files and notebooks, it is recommended to make sure that dependencies are properly configured. More information about version specifiers can be found in [PEP 440](https://peps.python.org/pep-0440/#version-specifiers).
 
- * `requirements.txt` should contain the *exact* (a.k.a. pinned) versions of the required dependencies during development. Note that[`pipreqs`](https://github.com/bndr/pipreqs) can be used to infer automatically which packages are used in your code (whereas `pip freeze` would list all installed packages). Note that `-e .` is used to install your newly created module in [editable mode](https://setuptools.pypa.io/en/latest/userguide/development_mode.html).
+ * `requirements.txt` should contain the *exact* (a.k.a. pinned) versions of the required dependencies during development. Note that [`pipreqs`](https://github.com/bndr/pipreqs) can be used to infer automatically which packages are used in your code (whereas `pip freeze` would list all installed packages). Also note that `-e .` is used to install your newly created module in [editable mode](https://setuptools.pypa.io/en/latest/userguide/development_mode.html).
  * `environment.yml`, by default, delegates to `requirements.txt`.
  * In `pyproject.toml`, under section `tool.poetry.dependencies`, are listed the *install* dependencies of your module. It should represent the minimal versions of the required dependencies during regular usage. Therefore, this typically excludes any development tool, such as `pylint` or `pytest`.
 
