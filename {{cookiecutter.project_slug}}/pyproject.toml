@@ -14,8 +14,8 @@ packages = [{include = "{{cookiecutter.module_name}}", from = "src"}]
 python = "^3.10"
 numpy = "^1.24"
 pandas = "^2.0"
-
 {%- if cookiecutter.use_black %}
+
 [tool.black]
 line-length = 88
 target-version = ['py310', 'py311']
