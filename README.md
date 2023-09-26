@@ -34,6 +34,17 @@ The generated folder structure is straightforward:
  * notebooks have their own folder;
  * and, by default, a `data` folder is added, as a suggestion.
 
+You can know create an empty repository on GitLab (i.e. without an initial README file), and initialize it locally:
+
+```
+cd your-project
+git init --initial-branch=main
+git remote add origin https://gitlab.datascience.ch/you/your-project.git
+git add .
+git commit -m "Initial commit"
+git push --set-upstream origin main
+```
+
 Apart from adding code, both in `.py` files and notebooks, it is recommended to make sure that dependencies are properly configured. More information about version specifiers can be found in [PEP 440](https://peps.python.org/pep-0440/#version-specifiers).
 
  * `requirements.txt` should contain the *exact* (a.k.a. pinned) versions of the required dependencies during development. Note that [`pipreqs`](https://github.com/bndr/pipreqs) can be used to infer automatically which packages are used in your code (whereas `pip freeze` would list all installed packages). Also note that `-e .` is used to install your newly created module in [editable mode](https://setuptools.pypa.io/en/latest/userguide/development_mode.html).
