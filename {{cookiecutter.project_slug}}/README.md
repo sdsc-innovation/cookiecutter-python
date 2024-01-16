@@ -46,9 +46,8 @@ pytest
 ```
 {%- endif %}
 
-By default, [mypy](https://mypy-lang.org/) and [pylint](https://www.pylint.org/) are not executed automatically. You can however run them manually:
+By default, [mypy](https://mypy-lang.org/) is not executed automatically. You can however run them manually:
 
 ```
 mypy src
-pylint src
 ```

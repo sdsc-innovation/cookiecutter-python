@@ -1,13 +1,12 @@
 -e .
 numpy~=1.24
 pandas~=2.0
-{%- if cookiecutter.use_black %}
-black[jupyter]~=23.7
+{%- if cookiecutter.use_ruff %}
+ruff~=0.1.13
 {%- endif %}
 jupyter
 mypy~=1.4
 pre-commit~=3.3
-pylint~=2.17
 {%- if cookiecutter.use_pytest %}
 pytest~=7.4
 {%- endif %}

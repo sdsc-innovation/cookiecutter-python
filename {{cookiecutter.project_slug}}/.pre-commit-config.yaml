@@ -10,9 +10,13 @@ repos:
   - id: check-yaml
   - id: end-of-file-fixer
   - id: trailing-whitespace
-{%- if cookiecutter.use_black %}
-- repo: https://github.com/psf/black
-  rev: 23.7.0
+{%- if cookiecutter.use_ruff %}
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.1.13
   hooks:
-  - id: black
+    - id: ruff
+      types_or: [ python, pyi, jupyter ]
+      args: [ --exit-non-zero-on-fix ]
+    - id: ruff-format
+      types_or: [ python, pyi, jupyter ]
 {%- endif %}
