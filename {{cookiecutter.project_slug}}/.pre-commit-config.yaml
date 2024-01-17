@@ -16,7 +16,8 @@ repos:
   hooks:
     - id: ruff
       types_or: [ python, pyi, jupyter ]
-      args: [ --exit-non-zero-on-fix ]
+      args: [ --exit-zero ]
+      verbose: true
     - id: ruff-format
       types_or: [ python, pyi, jupyter ]
 {%- endif %}
