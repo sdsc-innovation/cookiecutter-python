@@ -81,6 +81,6 @@ Please refer to the generated `README.md` for more details, in particular to ins
  * [Flake8 configuration](https://flake8.pycqa.org/en/latest/user/configuration.html)
  * [Black configuration](https://black.readthedocs.io/en/stable/usage_and_configuration/the_basics.html#configuration-via-a-file)
  * [Pylint configuration](https://pylint.pycqa.org/en/latest/user_guide/configuration/index.html)
- * [Ruff configuration](https://docs.astral.sh/ruff/configuration/)
+ * [Ruff configuration](https://docs.astral.sh/ruff/configuration/) and [rules](https://docs.astral.sh/ruff/rules/)
  * [Poetry basic usage](https://python-poetry.org/docs/basic-usage/)
  * [Semantic versioning](https://semver.org/)
