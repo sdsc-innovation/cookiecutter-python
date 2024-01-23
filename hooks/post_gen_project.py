@@ -13,6 +13,7 @@ def remove(path):
 REMOVED_PATHS = [
     # {% if not cookiecutter.use_pytest %}
     "tests",
+    ".github",
     ".gitlab-ci.yml",
     # {% endif %}
 ]

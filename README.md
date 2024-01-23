@@ -1,6 +1,6 @@
 # Cookiecutter template for Python
 
-This repository contains a simple Cookiecutter template for Python projects.
+This repository contains a Cookiecutter template for Python projects. While it is designed to fit a data science context, it is designed to cover most common uses of Python.
 
 
 ## Getting started
@@ -14,7 +14,7 @@ pip install -U cookiecutter
 Then, create a project based on this template:
 
 ```
-cookiecutter https://gitlab.datascience.ch/industry/common/cookiecutter-python.git
+cookiecutter https://github.com/sdsc-innovation/cookiecutter-python.git
 ```
 
 This will prompt you for:
@@ -39,7 +39,7 @@ You can know create an empty repository on GitLab (i.e. without an initial READM
 ```
 cd your-project
 git init --initial-branch=main
-git remote add origin https://gitlab.datascience.ch/you/your-project.git
+git remote add origin https://github.com/you/your-project.git
 git add .
 git commit -m "Initial commit"
 git push --set-upstream origin main
@@ -56,14 +56,16 @@ Please refer to the generated `README.md` for more details, in particular to ins
 
 ## Design choices and tools
 
- * A `pyproject.toml` file is used instead of `setup.py`, as the latter is deprecated. Also, the TOML file act as a centralized configuration file for other tools.
- * The [`src` layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/) is used, to enforce proper use of [editable](https://setuptools.pypa.io/en/latest/userguide/development_mode.html) installation during development.
- * [Poetry](https://python-poetry.org/) is used as build system instead of [PyPA](https://www.pypa.io/en/latest/)'s [Setuptools](https://setuptools.pypa.io/en/latest/), as the configuration syntax is cleaner. However, if you require CPython extensions, you will need to use [Setuptools extension system](https://setuptools.pypa.io/en/latest/userguide/ext_modules.html).
+ * Python 3.10 is chosen as a minimum, as 3.9 will reach end-of-life in 2025.
+ * A `pyproject.toml` file is the [recommended](https://packaging.python.org/en/latest/discussions/setup-py-deprecated/#is-pyproject-toml-mandatory) way to store configuration.
+ * [Poetry](https://python-poetry.org/) is used as build system instead of [PyPA](https://www.pypa.io/en/latest/)'s [Setuptools](https://setuptools.pypa.io/en/latest/), as the configuration syntax is cleaner. However, if you require CPython extensions, you will need to use [Setuptools extension system](https://setuptools.pypa.io/en/latest/userguide/ext_modules.html). Note that `setup.py` and Setuptools are **not** [deprecated](https://packaging.python.org/en/latest/discussions/setup-py-deprecated/) as a build backend.
  * `requirements.txt` is used to define development dependencies. An `environment.yml` is also provided for [Conda](http://conda.io) users.
+ * The [`src` layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/) is used, to enforce proper use of [editable](https://setuptools.pypa.io/en/latest/userguide/development_mode.html) installation during development.
  * [Ruff](https://docs.astral.sh/ruff/) is used for code formatting and linting, using mostly the default configuration.
  * [pytest](https://pytest.org/) is used for unit testing, as the standard `unittest` module tends to be more verbose.
  * [mypy](https://mypy-lang.org/) is suggested for static type checking.
  * [`.gitlab-ci.yml`](https://docs.gitlab.com/ee/ci/yaml/gitlab_ci_yaml.html) is pre-configured to run unit tests on [GitLab CI/CD](https://docs.gitlab.com/ee/ci/).
+ * [`.github/workflows/pytest.yml`](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python) is provided to run unit tests on [GitHub Actions](https://docs.github.com/en/actions).
  * [pre-commit](https://pre-commit.com/) hooks are configured to enforce Ruff, and also some quality-of-life [built-in tools](https://github.com/pre-commit/pre-commit-hooks).
 
 
