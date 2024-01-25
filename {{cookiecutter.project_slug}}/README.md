@@ -39,7 +39,7 @@ pre-commit run --all-files
 ```
 {%- if cookiecutter.use_pytest %}
 
-Unit tests (using [pytest](https://pytest.org/)) are not executed as a pre-commit hook, to keep the overhead to a minimum. Instead, assuming that GitLab CI/CD is available, a `.gitlab-ci.yml` is configured to run tests after each commit. You can also execute them locally, manually:
+Unit tests (using [pytest](https://pytest.org/)) are not executed as a pre-commit hook, to keep the overhead to a minimum. Instead, a CI/CD pipeline is configured to run tests after each commit. You can also execute them locally, manually:
 
 ```
 pytest

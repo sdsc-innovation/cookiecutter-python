@@ -19,11 +19,11 @@ cookiecutter https://github.com/sdsc-innovation/cookiecutter-python.git
 
 This will prompt you for:
 
- 1. a project name, used in `README.md`;
- 2. a project slug (in `kebab-case`), used for the top-level directory name;
- 3. a module name (in `snake_case`);
- 4. whether you would like to use Ruff to format and analyze your code;
- 5. whether you would like to use pytest to write unit tests.
+ * a project name, used in `README.md`;
+ * a project slug (in `kebab-case`), used for the top-level directory name;
+ * a module name (in `snake_case`);
+ * whether you would like to use Ruff to format and analyze your code;
+ * whether you would like to use pytest to write unit tests.
 
 The module name may also be a short generic identifier, such as `lib` or `helper`, if you do not plan to use it externally.
 
@@ -34,7 +34,7 @@ The generated folder structure is straightforward:
  * notebooks have their own folder;
  * and, by default, a `data` folder is added, as a suggestion.
 
-You can know create an empty repository on GitLab (i.e. without an initial README file), and initialize it locally:
+You can now create an empty repository on GitHub or GitLab (i.e. without an initial README file), and initialize it locally:
 
 ```
 cd your-project
@@ -50,6 +50,8 @@ Apart from adding code, both in `.py` files and notebooks, it is recommended to 
  * `requirements.txt` should contain the *exact* (a.k.a. pinned) versions of the required dependencies during development. Note that [`pipreqs`](https://github.com/bndr/pipreqs) can be used to infer automatically which packages are used in your code (whereas `pip freeze` would list all installed packages). Also note that `-e .` is used to install your newly created module in [editable mode](https://setuptools.pypa.io/en/latest/userguide/development_mode.html).
  * `environment.yml`, by default, delegates to `requirements.txt`.
  * In `pyproject.toml`, under section `tool.poetry.dependencies`, are listed the *install* dependencies of your module. It should represent the minimal versions of the required dependencies during regular usage. Therefore, this typically excludes any development tool, such as `ruff` or `pytest`.
+
+If unit tests are enabled during template instantiation, CI/CD configuration files are provided both for GitHub and GitLab. Keep only the one that applies to your scenario.
 
 Please refer to the generated `README.md` for more details, in particular to install dependencies and register pre-commit hooks.
 
