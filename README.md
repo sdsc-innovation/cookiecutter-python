@@ -58,7 +58,7 @@ Please refer to the generated `README.md` for more details, in particular to ins
 
 ## Design choices and tools
 
- * Python 3.10 is chosen as a minimum, as 3.9 will reach end-of-life in 2025.
+ * Python 3.10 is chosen as a minimum, as 3.9 will reach end-of-life in 2025. We recommend 3.11, as some packages may not fully support 3.12 yet.
  * A [`pyproject.toml`](https://pip.pypa.io/en/stable/reference/build-system/pyproject-toml/) file is the [recommended](https://packaging.python.org/en/latest/discussions/setup-py-deprecated/#is-pyproject-toml-mandatory) way to store configuration.
  * [PyPA](https://www.pypa.io/en/latest/)'s [Setuptools](https://setuptools.pypa.io/en/latest/) is used as build backend, as this is historically the most common solution. However, other options are discussed in [Python Packaging User Guide](https://packaging.python.org/en/latest/), such as [Hatch](https://hatch.pypa.io/latest/) or [Poetry](https://python-poetry.org/).
  * No `setup.py` is provided, as typical projects do not need to access low-level Setuptools configuration. Note that `setup.py` and Setuptools are not [deprecated](https://packaging.python.org/en/latest/discussions/setup-py-deprecated/) as a build backend; [building C extensions](https://setuptools.pypa.io/en/latest/userguide/ext_modules.html) will require this file. 
