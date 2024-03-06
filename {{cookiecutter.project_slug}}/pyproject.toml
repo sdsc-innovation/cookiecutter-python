@@ -22,6 +22,8 @@ version = {attr = "{{ cookiecutter.module_name }}.__version__"}
 extend-include = ["*.ipynb"]
 target-version = "py310"
 line-length = 88
+
+[tool.ruff.lint]
 extend-select = [
     "W605",   # pycodestyle: invalid-escape-sequence
     "S102",   # flake8-bandit: exec-builtin
@@ -37,7 +39,7 @@ ignore = [
     "NPY002", # numpy-legacy-random
 ]
 
-[tool.ruff.per-file-ignores]
+[tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]
 "tests/**" = ["INP001"]
 "[!t][!e][!s][!t][!s]*/**" = ["PT"]
