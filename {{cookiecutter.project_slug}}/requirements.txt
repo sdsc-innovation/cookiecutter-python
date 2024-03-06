@@ -1,12 +1,12 @@
 -e .
-numpy~=1.24
-pandas~=2.0
+numpy
+pandas
 {%- if cookiecutter.use_ruff %}
-ruff~=0.1.13
+ruff
 {%- endif %}
-jupyter
-mypy~=1.4
-pre-commit~=3.3
+notebook
+mypy
+pre-commit
 {%- if cookiecutter.use_pytest %}
-pytest~=7.4
+pytest
 {%- endif %}
