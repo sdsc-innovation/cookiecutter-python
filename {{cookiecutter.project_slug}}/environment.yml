@@ -1,6 +1,6 @@
 name: {{ cookiecutter.project_slug }}
 dependencies:
-  - python~=3.11.8
+  - python~=3.10.14
   - pip
   - pip:
     - -r requirements.txt

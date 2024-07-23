@@ -1,12 +1,12 @@
 -e .
+mypy
+notebook
 numpy
 pandas
-{%- if cookiecutter.use_ruff %}
-ruff
-{%- endif %}
-notebook
-mypy
 pre-commit
 {%- if cookiecutter.use_pytest %}
 pytest
+{%- endif %}
+{%- if cookiecutter.use_ruff %}
+ruff
 {%- endif %}
