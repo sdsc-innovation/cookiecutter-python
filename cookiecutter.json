@@ -1,14 +1,9 @@
 {
-  "project_name": "Project",
-  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-  "module_name": "{{ cookiecutter.project_slug.replace('-', '_') }}",
-  "use_ruff": true,
-  "use_pytest": true,
-  "__prompts__": {
-    "project_name": "Project name, human-readable",
-    "project_slug": "Repository name, kebab-case",
-    "module_name": "Python module name, snake-case",
-    "use_ruff": "Enable code-formatting, using Ruff",
-    "use_pytest": "Enable unit testing, using pytest"
-  }
+    "templates": {
+        "python-minimal": {
+            "path": "./python-minimal",
+            "title": "Python - Minimal",
+            "description": "simple starting point for a data science project in Python"
+        }
+    }
 }
