@@ -1,5 +1,4 @@
 -e .
-mypy
 notebook
 numpy
 pandas

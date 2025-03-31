@@ -59,9 +59,3 @@ Unit tests (using [pytest](https://pytest.org/)) are not executed as a pre-commi
 pytest
 ```
 {%- endif %}
-
-By default, [mypy](https://mypy-lang.org/) is not executed automatically. You can however run them manually:
-
-```
-mypy src
-```
