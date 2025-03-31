@@ -8,5 +8,5 @@ pre-commit
 pytest
 {%- endif %}
 {%- if cookiecutter.use_ruff %}
-ruff
+ruff==0.11.2
 {%- endif %}
