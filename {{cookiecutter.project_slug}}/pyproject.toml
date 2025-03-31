@@ -4,13 +4,18 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "{{ cookiecutter.module_name }}"
-authors = []
+authors = [
+    # TODO configure authors
+    # { name = "Jane Smith", email = "jane.smith@example.com" },
+    # { name = "John Doe", email = "john.doe@example.com" },
+]
 description = ""
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "numpy~=1.24",
-    "pandas~=2.0",
+    # TODO configure install dependencies
+    # "numpy~=2.0",
+    # "pandas~=2.0",
 ]
 dynamic = ["version"]
 

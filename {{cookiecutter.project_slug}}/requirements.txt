@@ -1,10 +1,8 @@
 -e .
-notebook
-numpy
-pandas
-pre-commit
+notebook==7.3.3
+pre-commit==4.2.0
 {%- if cookiecutter.use_pytest %}
-pytest
+pytest==8.3.5
 {%- endif %}
 {%- if cookiecutter.use_ruff %}
 ruff==0.11.2
