@@ -9,6 +9,6 @@
     "project_slug": "Repository name, kebab-case",
     "module_name": "Python module name, snake-case",
     "use_ruff": "Enable code-formatting, using Ruff",
-    "use_pytest": "Enable unit testing, using Pytest"
+    "use_pytest": "Enable unit testing, using pytest"
   }
 }
