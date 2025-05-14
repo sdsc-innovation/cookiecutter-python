@@ -1,9 +1,9 @@
 -e .
-notebook==7.3.3
+notebook==7.4.2
 pre-commit==4.2.0
 {%- if cookiecutter.use_pytest %}
 pytest==8.3.5
 {%- endif %}
 {%- if cookiecutter.use_ruff %}
-ruff==0.11.2
+ruff==0.11.9
 {%- endif %}
